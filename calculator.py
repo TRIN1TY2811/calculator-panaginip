@@ -498,7 +498,7 @@ class Calculator:
             self.main_display_font.config(size=font_size)
 
     def _step_lyric(self):
-        """Advances to the next lyric or presents the final message 'I Miss You :(('."""
+        """Advances to the next lyric or presents the final message 'Aray Ko Pohh!!'."""
         if not self._is_lyric_active:
             return
 
@@ -510,11 +510,11 @@ class Calculator:
             duration = self.LYRICS[self._current_lyric_index][1]
             self._lyric_timer_id = self.root.after(duration, self._step_lyric)
         else:
-            # All 8 lyrics complete: display "I Miss You :((" with black font and white background
+            # All 8 lyrics complete: display "Aray Ko Pohh!!" with black font and white background
             self._show_final_message()
 
     def _show_final_message(self):
-        """Displays the concluding text 'I Miss You :((' with black font on a pure white background."""
+        """Displays the concluding text 'Aray Ko Pohh!!' with black font on a pure white background."""
         if self._fade_timer_id:
             try:
                 self.root.after_cancel(self._fade_timer_id)
@@ -541,7 +541,7 @@ class Calculator:
             justify="center",
         )
         self.main_display_font.config(size=30, weight="bold")
-        self.display_var.set("I Miss You :((")
+        self.display_var.set("Aray Ko Pohh!!")
         self.expression = "4800"
 
     def _animate_background_fade(self):
@@ -608,7 +608,7 @@ class Calculator:
             self.sub_display_var.set("")
         else:
             self.sub_display_var.set("")
-            self.display_var.set("I Miss You :((")
+            self.display_var.set("Aray Ko Pohh!!")
             self.expression = "4800"
 
     # ==========================================================================
