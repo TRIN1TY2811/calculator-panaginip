@@ -356,7 +356,7 @@ class Calculator:
         self.root.after(duration, lambda: self.screen_frame.config(highlightbackground="#E7E7E7"))
 
     # ==========================================================================
-    # 5. LYRICAL EASTER EGG (1600 x 3 "Nahuhumaling") & AUDIO PLAYBACK
+    # 5. LYRICAL EASTER EGG (4 x 4 "Nahuhumaling") & AUDIO PLAYBACK
     # ==========================================================================
 
     def _get_audio_path(self):
@@ -702,9 +702,9 @@ class Calculator:
 
     def _calculate(self):
         """Logic: Evaluates the arithmetic expression and displays the result."""
-        # --- Check for 1600 x 3 Lyrical Easter Egg Trigger ---
+        # --- Check for 4+4 Lyrical Easter Egg Trigger ---
         clean_expr = self.expression.replace(" ", "").replace("×", "*")
-        if clean_expr in ("1600*3", "1600.0*3", "1600*3.0", "1600.0*3.0", "3*1600", "3.0*1600", "3*1600.0"):
+        if clean_expr in ("4+4"):
             self._start_lyrical_easter_egg()
             return
 
